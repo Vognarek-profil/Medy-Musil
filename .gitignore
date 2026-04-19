@@ -1,5 +1,10 @@
-# Local Claude Code settings
+# Local Claude Code settings & projektová dokumentace (nesouvisí s nasazením webu)
 .claude/
+CLAUDE.md
+Prompt.txt
+Steps SEO.txt
+Základní info.txt
+convert_to_webp.py
 
 # OS / editor
 Thumbs.db
