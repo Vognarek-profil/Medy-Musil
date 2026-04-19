@@ -1,0 +1,13 @@
+# Local Claude Code settings
+.claude/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
