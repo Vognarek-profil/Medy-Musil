@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0d0d0d">
     <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="geo.region" content="CZ-PA">
+    <meta name="geo.placename" content="Kamenná Horka, Svitavsko">
+    <meta name="geo.position" content="49.7855;16.5497">
+    <meta name="ICBM" content="49.7855, 16.5497">
+
+    <!-- Preload critical image (LCP) -->
+    <link rel="preload" as="image" href="Foto včely/470192029_9333522549992795_5317311015093511232_n.webp" type="image/webp" fetchpriority="high">
     <meta name="author" content="Medy Musil – rodinné včelařství Kamenná Horka">
     <meta name="google-site-verification" content="1NeN-Q4sO1WM7IdoNKzD47d6cTdz562kGFqpfysDiCE">
 
@@ -48,13 +55,17 @@
       "@type": "LocalBusiness",
       "@id": "https://medymusil.cz/#business",
       "name": "Medy Musil",
-      "description": "Rodinné včelařství s tradicí tří generací. Lesní, květový a smíšený med ze Svitavska a ručně vyráběné vánoční ozdoby z včelího vosku. Předání v Kamenné Horce, Svitavech a po domluvě i v Brně.",
+      "description": "Rodinné včelařství s tradicí tří generací z Kamenné Horky na Svitavsku. Lesní, květový a smíšený med přímo od včelaře. Ručně vyráběné vánoční ozdoby z včelího vosku. Osobní odběr v Kamenné Horce, Svitavech a po domluvě i v Brně.",
+      "slogan": "Poctivý med ze Svitavska – přímo od včelaře",
       "url": "https://medymusil.cz/",
-      "telephone": "+420 605 089 382",
+      "telephone": "+420605089382",
       "image": "https://medymusil.cz/og-image.jpg",
+      "logo": "https://medymusil.cz/favicon.svg",
       "priceRange": "$$",
+      "hasMap": "https://maps.google.com/maps?q=Kamenn%C3%A1+Horka+568+02",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Kamenná Horka",
         "addressLocality": "Kamenná Horka",
         "addressRegion": "Pardubický kraj",
         "postalCode": "568 02",
@@ -62,23 +73,128 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "49.7855",
-        "longitude": "16.5497"
+        "latitude": 49.7855,
+        "longitude": 16.5497
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+420605089382",
+        "contactType": "sales",
+        "availableLanguage": { "@type": "Language", "name": "Czech" }
       },
       "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Svitavsko" },
-        { "@type": "City", "name": "Svitavy" },
         { "@type": "City", "name": "Kamenná Horka" },
-        { "@type": "City", "name": "Brno" }
+        { "@type": "City", "name": "Svitavy" },
+        { "@type": "City", "name": "Brno" },
+        { "@type": "AdministrativeArea", "name": "Svitavsko" },
+        { "@type": "AdministrativeArea", "name": "Pardubický kraj" }
       ],
       "makesOffer": [
-        { "@type": "Offer", "name": "Lesní med" },
-        { "@type": "Offer", "name": "Květový med" },
-        { "@type": "Offer", "name": "Smíšený med" },
-        { "@type": "Offer", "name": "Vánoční ozdoby z včelího vosku" }
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Lesní med ze Svitavska",
+            "description": "Tmavší med výrazné chuti s tóny pryskyřice a lesních bylinek. Sbíraný u okrajů lesů Svitavska, bohatý na minerály a enzymy.",
+            "category": "Přírodní med"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Květový med",
+            "description": "Světlý a jemný med sbíraný z letních luk plných jetelů, lipy a polních květů. Ideální pro každodenní použití.",
+            "category": "Přírodní med"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Smíšený med",
+            "description": "Přirozená harmonie lesního a květového medu s komplexní chutí, která odráží rozmanitost krajiny Kamenné Horky.",
+            "category": "Přírodní med"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Vánoční ozdoby z včelího vosku",
+            "description": "Ručně vyráběné vonné ozdoby z pravého včelího vosku. Jedinečný dárek s vůní medu.",
+            "category": "Ruční výroba ze včelího vosku"
+          }
+        }
       ],
-      "founder": { "@type": "Person", "name": "Rodina Musilových" },
-      "foundingDate": "1965"
+      "founder": {
+        "@type": "Person",
+        "name": "Rodina Musilových",
+        "jobTitle": "Včelař"
+      },
+      "foundingDate": "1965",
+      "knowsAbout": [
+        "včelařství", "chov včel", "výroba přírodního medu",
+        "lesní med", "květový med", "smíšený med", "včelí vosk"
+      ]
+    }
+    </script>
+
+    <!-- Structured data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kde si mohu koupit med od Medy Musil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Med si vyzvednete osobně v Kamenné Horce na Svitavsku (po telefonické domluvě), ve Svitavech nebo v Brně ve Studiu Creative na Bayerově ulici. Kontakt: +420 605 089 382."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dodáváte med do Brna?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. Do Brna jezdíme pravidelně a med předáváme ve Studiu Creative na Bayerově ulici. Termín předání ladíme telefonicky na +420 605 089 382."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak objednat med od včelaře Musila?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zavolejte na +420 605 089 382 a domluvíme se na termínu a místě předání – Kamenná Horka, Svitavy nebo Brno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jaké druhy medu nabízíte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nabízíme lesní med ze Svitavska, květový med z letních luk a smíšený med. Sezónně také ručně vyráběné vánoční ozdoby z pravého včelího vosku."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je váš med přírodní a bez přídavků?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. Med točíme až po úplném zrání, šetrně filtrujeme a plníme bez tepelné úpravy. Žádné cukry ani přídavky. Včelstva stojí u lesů a luk daleko od průmyslu a intenzivního zemědělství."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak dlouho se rodina Musilových věnuje včelařství?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rodinné včelařství má tradici tří generací od roku 1965. Od dědečka přes otce až po současného včelaře, který má více než 20 let přímých zkušeností."
+          }
+        }
+      ]
     }
     </script>
 
@@ -601,6 +717,31 @@
         .proc-item:hover .proc-ico { border-color: var(--accent); }
         .proc-item h3 { font-size: 1.05rem; margin-bottom: .7rem; }
         .proc-item p { font-size: .86rem; color: var(--text-muted); line-height: 1.7; }
+
+        /* ===========================
+           FAQ
+        =========================== */
+        #faq { background: var(--surface); }
+
+        .faq-list {
+            max-width: 780px; margin: 3.5rem auto 0;
+            display: flex; flex-direction: column; gap: 1rem;
+        }
+        .faq-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--r) var(--r) 0;
+            padding: 1.6rem 2rem;
+        }
+        .faq-item h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem; font-weight: 600;
+            color: var(--text); margin-bottom: .6rem;
+        }
+        .faq-item p { font-size: .9rem; color: var(--text-muted); line-height: 1.75; }
+        .faq-item a { color: var(--accent); text-decoration: underline; }
+        .faq-item strong { color: var(--text); }
 
         /* ===========================
            ODBĚR A PŘEDÁNÍ
@@ -1135,6 +1276,43 @@
                 <div class="proc-ico">❤️</div>
                 <h3>Osobní péče</h3>
                 <p>Za každým úlem stojí člověk, který zná každou kolonii. Není to výroba – je to vztah.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================= FAQ ========================= -->
+<section id="faq">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="label">Časté dotazy</span>
+            <h2 class="title">Co vás zajímá nejčastěji</h2>
+            <div class="deco-line"></div>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <h3>Kde si mohu koupit med od Medy Musil?</h3>
+                <p>Med si vyzvednete osobně v <strong>Kamenné Horce</strong> na Svitavsku, ve <strong>Svitavech</strong> nebo v <strong>Brně</strong> ve Studiu Creative na Bayerově ulici. Vždy po předchozí telefonické domluvě.</p>
+            </div>
+            <div class="faq-item reveal reveal-delay-1">
+                <h3>Dodáváte med do Brna?</h3>
+                <p>Ano. Do Brna jezdíme pravidelně a med předáváme ve Studiu Creative na Bayerově ulici. Termín ladíme telefonicky – bez poštovného, z ruky do ruky.</p>
+            </div>
+            <div class="faq-item reveal reveal-delay-2">
+                <h3>Jak objednat med?</h3>
+                <p>Stačí zavolat na <a href="tel:+420605089382">+420 605 089 382</a>. Domluvíme se na množství, druhu medu a místě předání. E-shop neprovozujeme – záleží nám na osobním kontaktu.</p>
+            </div>
+            <div class="faq-item reveal reveal-delay-3">
+                <h3>Jaké druhy medu nabízíte?</h3>
+                <p>Nabízíme <strong>lesní med ze Svitavska</strong>, <strong>květový med</strong> z letních luk a <strong>smíšený med</strong>. Sezónně také ručně vyráběné <strong>vánoční ozdoby z včelího vosku</strong>.</p>
+            </div>
+            <div class="faq-item reveal">
+                <h3>Je váš med přírodní a bez přídavků?</h3>
+                <p>Ano. Med točíme až po úplném zrání, šetrně filtrujeme a plníme bez tepelné úpravy. Žádné cukry ani přídavky – jen čistý med ze svitavských lesů a luk.</p>
+            </div>
+            <div class="faq-item reveal reveal-delay-1">
+                <h3>Jak dlouho se věnujete včelařství?</h3>
+                <p>Rodinné včelařství má tradici <strong>tří generací</strong> od roku 1965. Dnešní včelař navazuje na děda a otce s více než 20 lety vlastních zkušeností.</p>
             </div>
         </div>
     </div>
