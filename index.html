@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+    <!-- Google Consent Mode v2 – default: vše odmítnuto, dokud uživatel nerozhodne -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500
+        });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TCCZVWJP');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0d0d0d">
@@ -938,9 +959,137 @@
             .proc-grid { grid-template-columns: 1fr 1fr; }
             .container { padding: 0 1.25rem; }
         }
+
+        /* ===========================
+           COOKIE BAR
+        =========================== */
+        .cookie-bar {
+            position: fixed;
+            left: 0; right: 0; bottom: 0;
+            z-index: 9999;
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            box-shadow: 0 -8px 30px rgba(0,0,0,.35);
+            animation: cookie-bar-in .4s ease;
+        }
+        @keyframes cookie-bar-in {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        .cookie-bar-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 1.4rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.2rem;
+        }
+        .cookie-text {
+            color: var(--text-muted);
+            font-size: .88rem;
+            max-width: 640px;
+            line-height: 1.6;
+        }
+        .cookie-text .cookie-link { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+        .cookie-text .cookie-link:hover { color: var(--accent-dark); }
+        .cookie-actions {
+            display: flex;
+            gap: .7rem;
+            flex-wrap: wrap;
+        }
+        .cookie-btn {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: .65rem 1.3rem;
+            border-radius: var(--r);
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all .2s ease;
+            white-space: nowrap;
+        }
+        .cookie-btn-primary { background: var(--accent); color: #0d0d0d; }
+        .cookie-btn-primary:hover { background: var(--accent-dark); }
+        .cookie-btn-ghost {
+            background: transparent;
+            border-color: rgba(240,237,230,.25);
+            color: var(--text);
+        }
+        .cookie-btn-ghost:hover { border-color: var(--text); }
+        .cookie-settings {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 1.5rem 1.4rem;
+            border-top: 1px solid var(--border);
+        }
+        .cookie-setting-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .cookie-setting-row:last-of-type { border-bottom: none; }
+        .cookie-setting-row strong { display: block; font-size: .9rem; color: var(--text); margin-bottom: .2rem; }
+        .cookie-setting-row p { font-size: .8rem; color: var(--text-muted); margin: 0; }
+        .cookie-toggle { position: relative; display: inline-block; width: 42px; height: 24px; flex-shrink: 0; }
+        .cookie-toggle input { opacity: 0; width: 0; height: 0; }
+        .cookie-toggle span {
+            position: absolute; inset: 0;
+            background: var(--border);
+            border-radius: 999px;
+            transition: background .2s ease;
+            cursor: pointer;
+        }
+        .cookie-toggle span::before {
+            content: '';
+            position: absolute;
+            left: 3px; top: 3px;
+            width: 18px; height: 18px;
+            background: var(--text);
+            border-radius: 50%;
+            transition: transform .2s ease;
+        }
+        .cookie-toggle input:checked + span { background: var(--accent); }
+        .cookie-toggle input:checked + span::before { transform: translateX(18px); background: #0d0d0d; }
+        .cookie-toggle-locked {
+            width: 42px; height: 24px;
+            border-radius: 999px;
+            background: var(--accent);
+            opacity: .5;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .cookie-toggle-locked::before {
+            content: '';
+            position: absolute;
+            right: 3px; top: 3px;
+            width: 18px; height: 18px;
+            background: #0d0d0d;
+            border-radius: 50%;
+        }
+        .footer-cookie-link {
+            background: none; border: none; cursor: pointer;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: .78rem; color: var(--text-dim);
+            text-decoration: underline; text-underline-offset: 2px;
+        }
+        .footer-cookie-link:hover { color: var(--text-muted); }
+        @media (max-width: 700px) {
+            .cookie-bar-inner { flex-direction: column; align-items: stretch; }
+            .cookie-actions { justify-content: stretch; }
+            .cookie-btn { flex: 1; }
+        }
     </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCCZVWJP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- NAVIGATION -->
 <nav id="nav">
@@ -1486,11 +1635,59 @@
     <div class="container">
         <div class="footer-inner">
             <div class="footer-logo">Medy <span>Musil</span></div>
-            <div class="footer-copy">© 2026 Medy Musil &nbsp;·&nbsp; Kamenná Horka, Svitavsko &nbsp;·&nbsp; Předání medu i v Brně &nbsp;·&nbsp; medymusil.cz</div>
+            <div class="footer-copy">© 2026 Medy Musil &nbsp;·&nbsp; Kamenná Horka, Svitavsko &nbsp;·&nbsp; Předání medu i v Brně &nbsp;·&nbsp; medymusil.cz &nbsp;·&nbsp; <a href="/zasady-ochrany-osobnich-udaju.html" class="footer-cookie-link">Zásady ochrany osobních údajů</a> &nbsp;·&nbsp; <button type="button" class="footer-cookie-link" id="cookie-reopen-btn">Nastavení cookies</button></div>
             <div style="font-size:1.4rem">🐝</div>
         </div>
     </div>
 </footer>
+
+<!-- COOKIE BAR -->
+<div id="cookie-bar" class="cookie-bar" role="dialog" aria-live="polite" aria-label="Souhlas s používáním cookies" hidden>
+    <div class="cookie-bar-inner">
+        <p class="cookie-text">
+            Tento web používá cookies pro měření návštěvnosti přes Google Tag Manager.
+            Nezbytné cookies běží vždy, analytické a marketingové jen s vaším souhlasem.
+            Více v <a href="/zasady-ochrany-osobnich-udaju.html" class="cookie-link">zásadách ochrany osobních údajů</a>.
+        </p>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-btn cookie-btn-ghost" id="cookie-settings-btn">Nastavení</button>
+            <button type="button" class="cookie-btn cookie-btn-ghost" id="cookie-reject-btn">Odmítnout</button>
+            <button type="button" class="cookie-btn cookie-btn-primary" id="cookie-accept-btn">Přijmout vše</button>
+        </div>
+    </div>
+    <div class="cookie-settings" id="cookie-settings-panel" hidden>
+        <div class="cookie-setting-row">
+            <div>
+                <strong>Nezbytné</strong>
+                <p>Nutné pro základní fungování webu. Nelze vypnout.</p>
+            </div>
+            <span class="cookie-toggle-locked" aria-hidden="true"></span>
+        </div>
+        <div class="cookie-setting-row">
+            <div>
+                <strong>Analytické</strong>
+                <p>Pomáhají pochopit, jak návštěvníci web používají.</p>
+            </div>
+            <label class="cookie-toggle">
+                <input type="checkbox" id="cookie-toggle-analytics">
+                <span></span>
+            </label>
+        </div>
+        <div class="cookie-setting-row">
+            <div>
+                <strong>Marketingové</strong>
+                <p>Umožňují cílenou reklamu a měření kampaní.</p>
+            </div>
+            <label class="cookie-toggle">
+                <input type="checkbox" id="cookie-toggle-marketing">
+                <span></span>
+            </label>
+        </div>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-btn cookie-btn-primary" id="cookie-save-btn">Uložit nastavení</button>
+        </div>
+    </div>
+</div>
 
 <!-- LIGHTBOX -->
 <div id="lightbox">
@@ -1683,6 +1880,79 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 window.addEventListener('load', () => {
     document.getElementById('hero-bg').classList.add('loaded');
 });
+
+/* ======================
+   COOKIE CONSENT
+====================== */
+(() => {
+    const CONSENT_KEY = 'mm_cookie_consent';
+    const bar = document.getElementById('cookie-bar');
+    const settingsPanel = document.getElementById('cookie-settings-panel');
+    const analyticsToggle = document.getElementById('cookie-toggle-analytics');
+    const marketingToggle = document.getElementById('cookie-toggle-marketing');
+
+    function getConsent() {
+        try { return JSON.parse(localStorage.getItem(CONSENT_KEY)); } catch (e) { return null; }
+    }
+
+    function applyConsent(consent) {
+        if (typeof gtag !== 'function') return;
+        gtag('consent', 'update', {
+            analytics_storage: consent.analytics ? 'granted' : 'denied',
+            ad_storage: consent.marketing ? 'granted' : 'denied',
+            ad_user_data: consent.marketing ? 'granted' : 'denied',
+            ad_personalization: consent.marketing ? 'granted' : 'denied'
+        });
+    }
+
+    function saveConsent(consent) {
+        localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+        applyConsent(consent);
+        bar.hidden = true;
+        settingsPanel.hidden = true;
+    }
+
+    function openBar(showSettings) {
+        const existing = getConsent();
+        if (existing) {
+            analyticsToggle.checked = !!existing.analytics;
+            marketingToggle.checked = !!existing.marketing;
+        }
+        bar.hidden = false;
+        settingsPanel.hidden = !showSettings;
+    }
+
+    const existing = getConsent();
+    if (existing) {
+        applyConsent(existing);
+    } else {
+        bar.hidden = false;
+    }
+
+    if (window.location.hash === '#cookie-nastaveni') {
+        openBar(true);
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
+    document.getElementById('cookie-accept-btn').addEventListener('click', () => {
+        saveConsent({ analytics: true, marketing: true });
+    });
+    document.getElementById('cookie-reject-btn').addEventListener('click', () => {
+        saveConsent({ analytics: false, marketing: false });
+    });
+    document.getElementById('cookie-settings-btn').addEventListener('click', () => {
+        settingsPanel.hidden = !settingsPanel.hidden;
+    });
+    document.getElementById('cookie-save-btn').addEventListener('click', () => {
+        saveConsent({
+            analytics: analyticsToggle.checked,
+            marketing: marketingToggle.checked
+        });
+    });
+    document.getElementById('cookie-reopen-btn').addEventListener('click', () => {
+        openBar(true);
+    });
+})();
 
 </script>
 </body>

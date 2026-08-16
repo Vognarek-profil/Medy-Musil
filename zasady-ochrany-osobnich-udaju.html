@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- Google Consent Mode v2 – default: vše odmítnuto, dokud uživatel nerozhodne -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500
+        });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TCCZVWJP');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="robots" content="index, follow">
+    <title>Zásady ochrany osobních údajů | Medy Musil</title>
+    <meta name="description" content="Informace o zpracování osobních údajů a používání cookies na webu medymusil.cz.">
+    <link rel="canonical" href="https://medymusil.cz/zasady-ochrany-osobnich-udaju.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:          #0d0d0d;
+            --surface:     #151515;
+            --surface-2:   #1c1c1c;
+            --border:      #272727;
+            --accent:      #e8b923;
+            --accent-dark: #c9a01e;
+            --text:        #f0ede6;
+            --text-muted:  #888;
+            --text-dim:    #444;
+            --max-w:       820px;
+            --r:           4px;
+            --r-lg:        12px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', system-ui, sans-serif;
+            font-weight: 400;
+            line-height: 1.75;
+        }
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; line-height: 1.25; }
+        a { color: var(--accent); }
+        a:hover { color: var(--accent-dark); }
+
+        .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 1.4rem 0;
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-weight: 600; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        .back-link { font-size: .85rem; color: var(--text-muted); text-decoration: none; }
+        .back-link:hover { color: var(--text); }
+
+        main { padding: 3.5rem 0 5rem; }
+        h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: .6rem; }
+        .updated { font-size: .82rem; color: var(--text-dim); margin-bottom: 2.8rem; }
+
+        h2 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-top: 2.6rem;
+            margin-bottom: .9rem;
+        }
+        section:first-of-type h2 { margin-top: 0; }
+        p { color: var(--text-muted); margin-bottom: 1rem; }
+        strong { color: var(--text); font-weight: 600; }
+        ul { color: var(--text-muted); padding-left: 1.3rem; margin-bottom: 1rem; }
+        li { margin-bottom: .5rem; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0 1.6rem;
+            font-size: .85rem;
+        }
+        th, td {
+            text-align: left;
+            padding: .7rem .8rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+        th { color: var(--text); font-weight: 600; background: var(--surface); }
+        .table-wrap { overflow-x: auto; }
+
+        .contact-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 1.6rem 1.8rem;
+            margin: 1.4rem 0;
+        }
+        .contact-box p { margin-bottom: .4rem; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .cookie-link-btn {
+            background: none;
+            border: 1px solid rgba(240,237,230,.25);
+            color: var(--text);
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: .6rem 1.2rem;
+            border-radius: var(--r);
+            cursor: pointer;
+        }
+        .cookie-link-btn:hover { border-color: var(--text); }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 1.6rem 0;
+            font-size: .78rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+        .footer-cookie-link {
+            background: none; border: none; cursor: pointer;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: .78rem; color: var(--text-dim);
+            text-decoration: underline; text-underline-offset: 2px;
+        }
+        .footer-cookie-link:hover { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCCZVWJP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+    <div class="container header-inner">
+        <a href="/" class="logo">Medy <span>Musil</span></a>
+        <a href="/" class="back-link">← Zpět na web</a>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h1>Zásady ochrany osobních údajů</h1>
+        <p class="updated">Naposledy aktualizováno: 16. 8. 2026</p>
+
+        <section>
+            <h2>1. Kdo je správcem údajů</h2>
+            <p>
+                Provozovatelem webu <strong>medymusil.cz</strong> a správcem osobních údajů je
+                rodinné včelařství Musil, se stanovištěm Kamenná Horka 568 02, Svitavsko.
+            </p>
+            <div class="contact-box">
+                <p><strong>Telefon:</strong> +420 605 089 382</p>
+                <p><strong>Adresa:</strong> Kamenná Horka 568 02, Svitavsko</p>
+                <p><strong>E-mail:</strong> bude doplněn – do té doby nás prosím kontaktujte telefonicky</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Jaké údaje o vás zpracováváme</h2>
+            <p>
+                Web medymusil.cz je čistě prezentační – nemá kontaktní formulář ani žádnou registraci,
+                takže od vás aktivně nesbíráme žádné osobní údaje (jméno, e-mail, adresu apod.).
+                Pokud nás kontaktujete telefonicky, zpracováváme pouze údaje nutné k domluvě odběru medu
+                (telefonní číslo, případně jméno) po dobu nezbytnou k vyřízení objednávky.
+            </p>
+            <p>
+                Automaticky, prostřednictvím cookies a podobných technologií, mohou být zpracovávány:
+            </p>
+            <ul>
+                <li>technické údaje o návštěvě (typ zařízení, prohlížeč, přibližná poloha odvozená z IP)</li>
+                <li>statistiky návštěvnosti a chování na webu (pouze s vaším souhlasem)</li>
+                <li>údaje pro měření a cílení reklamních kampaní (pouze s vaším souhlasem)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Cookies a měřicí nástroje</h2>
+            <p>
+                Web používá <strong>Google Tag Manager (GTM)</strong> ke správě měřicích a marketingových kódů.
+                Dokud neudělíte souhlas přes cookie lištu, GTM pracuje v omezeném režimu
+                (<strong>Google Consent Mode v2</strong>) a neukládá cookies sloužící k identifikaci návštěvníka.
+                Po udělení souhlasu se mohou aktivovat nástroje jako Google Analytics nebo Google Ads,
+                které již cookies pro měření a remarketing používají.
+            </p>
+            <p>
+                Web dále obsahuje vloženou mapu <strong>Google Maps</strong> (sekce Kontakt), která je načtena vždy
+                a může ukládat vlastní cookies společnosti Google nezávisle na vašem souhlasu zde na webu –
+                řídí se zásadami ochrany soukromí Google.
+            </p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kategorie</th>
+                            <th>Účel</th>
+                            <th>Aktivní</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nezbytné</td>
+                            <td>Uložení vaší volby souhlasu (localStorage), základní funkčnost webu</td>
+                            <td>Vždy</td>
+                        </tr>
+                        <tr>
+                            <td>Analytické</td>
+                            <td>Statistiky návštěvnosti a chování na webu (např. Google Analytics)</td>
+                            <td>Jen se souhlasem</td>
+                        </tr>
+                        <tr>
+                            <td>Marketingové</td>
+                            <td>Cílení a měření reklamních kampaní (např. Google Ads)</td>
+                            <td>Jen se souhlasem</td>
+                        </tr>
+                        <tr>
+                            <td>Google Maps (třetí strana)</td>
+                            <td>Zobrazení mapy stanoviště v sekci Kontakt</td>
+                            <td>Vždy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                Svou volbu můžete kdykoli změnit tlačítkem níže nebo odkazem
+                „Nastavení cookies“ v patičce webu.
+            </p>
+            <button type="button" class="cookie-link-btn" id="reopen-cookie-settings">Otevřít nastavení cookies</button>
+        </section>
+
+        <section>
+            <h2>4. Právní základ zpracování</h2>
+            <ul>
+                <li><strong>Nezbytné cookies</strong> – oprávněný zájem / nutnost pro fungování webu, souhlas se nevyžaduje.</li>
+                <li><strong>Analytické a marketingové cookies</strong> – váš souhlas udělený přes cookie lištu (lze kdykoli odvolat).</li>
+                <li><strong>Telefonická domluva odběru</strong> – jednání směřující k uzavření obchodu (čl. 6 odst. 1 písm. b) GDPR).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Doba uchování</h2>
+            <p>
+                Volba souhlasu s cookies se uchovává ve vašem prohlížeči (localStorage), dokud ji sami nezměníte
+                nebo nevymažete data prohlížeče. Údaje z telefonické domluvy uchováváme jen po dobu nezbytnou
+                k vyřízení odběru medu.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Vaše práva</h2>
+            <p>Podle GDPR máte právo zejména na:</p>
+            <ul>
+                <li>přístup ke svým osobním údajům,</li>
+                <li>opravu nepřesných údajů,</li>
+                <li>výmaz údajů („právo být zapomenut“),</li>
+                <li>omezení zpracování a vznesení námitky,</li>
+                <li>odvolání souhlasu s cookies kdykoli, se stejnou snadností, s jakou byl udělen,</li>
+                <li>podání stížnosti u <a href="https://www.uoou.cz" target="_blank" rel="noopener">Úřadu pro ochranu osobních údajů</a> (uoou.cz).</li>
+            </ul>
+            <p>Pro uplatnění kteréhokoli z těchto práv nás kontaktujte telefonicky na čísle uvedeném výše.</p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 Medy Musil &nbsp;·&nbsp; <a href="/">medymusil.cz</a> &nbsp;·&nbsp;
+        <button type="button" class="footer-cookie-link" id="footer-cookie-reopen">Nastavení cookies</button>
+    </div>
+</footer>
+
+<script>
+    // Tato stránka nemá vlastní cookie lištu (ta žije jen na hlavní stránce),
+    // proto tlačítka "Nastavení cookies" přesměrují zpět na web s parametrem,
+    // který cookie lištu na hlavní stránce automaticky otevře v režimu nastavení.
+    function goToCookieSettings() {
+        window.location.href = '/#cookie-nastaveni';
+    }
+    document.getElementById('reopen-cookie-settings').addEventListener('click', goToCookieSettings);
+    document.getElementById('footer-cookie-reopen').addEventListener('click', goToCookieSettings);
+</script>
+</body>
+</html>
